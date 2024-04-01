@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Cronômetro</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        p{
+            color: white;
+            font-size: 92px;
+        }
+        button{
+            border: none;
+            font-size: 52px;
+            cursor: pointer;
+            margin-left: 9px;
+            color: rgb(0, 0, 0);
+        }
+        button:hover{
+            box-shadow: rgb(255, 255, 255) 10px 10px 10px;
+        }
+        fieldset{
+            border: transparent;
+            text-align: center;
+        }
+        .btnI{
+            background-color: green;
+        }
+        .btnP{
+            background-color: grey;
+        }
+        .btnR{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <p id="counter"><strong>00:00:00</strong></p>
+        <button class="btnI" onclick="iniciar()">INICIAR</button>
+        <button class="btnP" onclick="pausar()">PAUSAR</button>
+        <button class="btnR" onclick="reiniciar()">REINICIAR</button>
+    </fieldset>
+</body>
+<script>
+    let segundos = 0;
+    let minutos = 0;
+    let horas = 0;
+    let intervalo;
+    function iniciar(){
+        intervalo = setInterval(counter, 1000);
+    }function pausar(){
+        clearInterval(intervalo);
+    }function reiniciar(){
+        clearInterval(intervalo)
+        document.getElementById('counter').innerText = "00:00:00";
+    }function umDígito(digito){
+       if(digito<10){
+        return('0'+digito)
+       }else{
+        return(digito)
+       }
+    }function counter(){
+        segundos++
+        if(segundos == 60){
+            minutos++
+            segundos = 0;
+        }if(minutos == 60){
+            minutos = 0
+            horas++;
+            alert('já se foram ' + horas + ' hora(s)')
+        }
+        document.getElementById('counter').innerText = umDígito(horas) + ":" + umDígito(minutos) + ":" + umDígito(segundos);
+    }
+</script>
+</html>

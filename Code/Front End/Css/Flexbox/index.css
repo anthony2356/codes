@@ -1,0 +1,121 @@
+/*
+flex box
+========
+
+display flex
+.content{
+    display-flex: inline-flex
+    pega todos os elementos e coloca eles em uma linha só.
+}
+
+flex direction
+.content{
+    flex-direction:row|row-reverse|column|column-reverse
+    permite com que os elementos fiquem posicionados [em cima, baixo, esquerda e direita] e
+    se eles serão posicionados na vertical ou horizontal.
+}
+
+flex wrap
+.content{
+    flex-wrap: nowrap
+    pega todos os elementos e colocam eles em uma linha única.
+    flex-wrap: wrap
+    pega os elementos [conteúdo] e organiza eles em várias linhas.
+    do topo ao fundo.
+    flex-wrap: wrap-reverse
+    faz o mesmo porém ao contrário.
+}
+
+flex flow
+.content{
+    flex-flow: column wrap
+    essa opção faz as colunas criada pelo desenvolvedor, se enrolarem e ficarem posicionadas
+    na horizontal.
+}
+
+justify content
+.content{
+    justify-content:flex-start
+    justifica contetúdo pra estar posicionado na esquerda.
+    justify-content:flex-end
+    justifica conteúdo pra estar posicionado na direita.
+    justify-content:center
+    justifica conteúdo pra estar posicionado no centro.
+    justifiy-content:space-between
+    justifca conteúdo pra ter espaço entre os elementos da página.
+    justify-content:space-around
+    justifica conteúdo pra ter espaço ao redor e entre os elementos da página.
+    justify-content:space-evenly
+    justifica conteúdo pra ter espaço organizado entre os elementos de uma forma uniforme.
+}
+
+align items
+.content{
+    align-items:stretch
+    alinhar items, mesmo tamanho, preenchendo a tela com o máximo que der.
+    align-items:flex-start
+    alinhar items, pra cima.
+    align-items:flex-end
+    alinhar items, pra baixo.
+    align-items:center
+    alinhar items, pro centro.
+    align-items:baseline
+    alinhar items, ao meio na mesma linha independentemente do tamanho de cada quadrado.
+}
+
+align content
+.content{
+    align-content:flex-start
+    alinhar conteúdo, pra cima.
+    align-content:flex-end
+    alinhar conteúdo, pra baixo.
+    align-content:center
+    alinhar conteúdo, pro centro.
+    align-content:stretch
+    alinhar conteúdo, preencher todos os cantos da página, cada elemento com suas
+    respectivas medidas.
+    align-content:space-between
+    alinhar conteúdo, espaço gerado entre os elementos.
+    align-content:space-around
+    alinhar conteúdo, espaço gerado em volta dos elementos.
+}
+
+gap
+.content{
+    display-flex;
+    ...
+    gap: 10px;
+    gap: 10px 20px; 
+    row-gap: 10px;
+    column-gap: 20px;
+    a propriedade gap controla o espaço entre os elementos, que ao aplicar, coloca espaçamento
+    entre os itens e não na borda deles.
+}
+*/
+
+/*
+flex box para crianças
+======================
+
+order 
+.item{
+    order: 5; // default is 0.
+    usando a propriedade order, podemos definir, em que ordem os itens vão estar de acordo,
+    e se eles vão ficar posicionados na vertical ou na horizontal.
+}
+
+grow
+.item{
+    flex-grow:4; // default is 0.
+    propriedade que faz com que os elementos tenham um tamanho em proporção em dobro dos 3 elementos,
+    quanto definido um valor como valor 1 a todos os elementos, os items na página recebem 
+    tamanhos e proporções igualadas.
+    ao usar essa propriedade, nunca inserimos valores negativos, e sempre positivos.
+}
+
+shrink
+.item{
+    flex-shrink: 4; // default is 1.
+    usando essa propriedade, o item encolhe se necessário, sendo assim podemos encolher 
+    o item na página desenvolvida, valores negativos nessa propriedad flex, não funcionam.
+*/

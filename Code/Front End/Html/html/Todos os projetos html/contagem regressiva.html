@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        p{
+            color: white;
+        }
+        fieldset{
+            text-align: center;
+            border: none;
+            font-size: 80px;
+        }
+        button{
+            font-size: 40px;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <p id="contador"><strong>00:00</strong></p>
+        <button onclick="iniciar()"><strong>Iniciar</strong></button>
+        <button onclick="reiniciar()"><strong>Reiniciar</strong></button>
+    </fieldset>
+    <script>
+
+        let milésimos = 0;
+        let segundos = 0;
+        let intervalo;
+
+        function iniciar(){
+         intervalo = setInterval(contador, 19)
+        }
+        
+        function reiniciar(){
+          document.getElementById('contador').innerText = "00:00";
+          alert('Reiniciando..')
+        }
+
+        function doisDígitos(Dígitos){
+            if(Dígitos < 10){
+                return('0' + Dígitos)
+            }else{
+                return(Dígitos)
+            }
+        }
+
+        function contador(){
+            milésimos++
+            if(milésimos == 60){
+                milésimos = 0;
+                segundos++
+                if(segundos == 10){
+                    alert('CONTAGEM REGRESSIVA FINALIZADA')
+                    clearInterval(intervalo)
+                }
+            }
+            document.getElementById('contador').innerText = doisDígitos(segundos) + ":" + doisDígitos(milésimos);
+        }
+
+    </script>
+</body>
+</html>

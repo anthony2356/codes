@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Roboto:wght@100;300;400;500;700;900&family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+:root {
+    --cor-bg: #2C2839;
+    --cor-um: #42D6FB;
+    --cor-dois: #EA5D36;
+    --cor-branco: #ccc;
+    --cor-preto: #111;
+}
+
+::selection {
+    background-color: var(--cor-dois);
+}
+
+.info h1::selection,
+.info img::selection {
+    background-color: var(--cor-um);
+}
+
+.bio {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 0;
+    background-color: var(--cor-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.info,
+.links {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info img {
+    width: 20%;
+    min-width: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--cor-dois);
+}
+
+.info h1 {
+    color: var(--cor-dois);
+    font-size: 2.2em;
+    font-family: "Belanosima", Arial, sans-serif;
+}
+
+.info h2 {
+    color: var(--cor-um);
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: "VT323", Arial, sans-serif;
+}
+
+.info p {
+    color: var(--cor-branco);
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.links {
+    gap: 20px;
+}
+
+.links a {
+    padding: 20px 30px;
+    width: 80%;
+    background-color: var(--cor-dois);
+    color: var(--cor-um);
+    font-family: "Belanosima", Arial, sans-serif;
+    text-decoration: none;
+
+    border-radius: 20px;
+    border-bottom: 4px solid var(--cor-um);
+    border-right: 5px solid var(--cor-um);
+    transition: all 0.3s;
+}
+
+.links a::selection {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.links a:hover {
+    background-color: var(--cor-um);
+    color: var(--cor-dois);
+    border-bottom: 4px solid var(--cor-dois);
+    border-right: 5px solid var(--cor-dois);
+    font-family: "Belanosima", Arial, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+
+    .info,
+    .links {
+        width: 90vw;
+    }
+}

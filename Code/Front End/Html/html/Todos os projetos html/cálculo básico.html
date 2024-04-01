@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Básico 1.0</title>
+    <style>
+        body{
+    background-color: grey;
+}
+fieldset{
+    background-color: white;
+    width: 32%;
+    margin-top: 5%;
+    margin-left: 35%;
+    font-size: 22px;
+    margin-bottom: 50%;
+    box-shadow: black 2px 2px 2px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    width: 32%;
+    cursor: pointer;
+    box-shadow: black 2px 2px 2px;
+}
+input{
+    box-shadow: black 2px 2px 2px;
+}
+.soma{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.subtração{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.divisão{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.multiplicação{
+    font-family: Arial, Helvetica, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <h1><strong>Sistema de Cálculo By Infinity108108</strong></h1>
+    <fieldset>
+        <div>
+            <p><strong>Insira um valor inicial para depois calcular com um valor qualquer que vier em mente. caso ocorra um bug no sistema e ele não calcule, aperte F5 para atualizar a página.</strong></p>
+
+            <label for="valorInicial" class="soma"><strong>Insira um valor Inicial</strong></label></div>
+            <input id="valor0" name="valorInicial"><br><br>
+ 
+            <label for="valorInserido1" class="soma"><strong>Somar</strong></label> 
+            <input id="valorUm" name="valorInserido1">
+            <button onclick="realizaSoma()"> + </button>
+
+            <label for="valorInserido2" class="subtração"><strong>Subtrair</strong></label> 
+            <input id="valorDois" name="valorInserido2">
+            <button onclick="realizaSubtração()"> - </button>
+
+            <label for="valorInserido3" class="divisão"><strong>Dividir</strong></label> 
+            <input id="valorTres" name="valorInserido3">
+            <button onclick="realizaDivisão()"> / </button>
+
+            <label for="valorInserido4" class="multiplicação"><strong>Multiplicar</strong></label> 
+            <input id="valorQuatro" name="valorInserido4">
+            <button onclick="realizaMultiplicação()"> X </button>
+            
+        </div>
+    </fieldset>
+</body>
+</html>
+<script>
+    alert('acessando.........')
+
+let valorEscolhidoPeloUsuário = Number(document.getElementById("valor0").value);
+
+function realizaSoma(){
+    let valor1 = Number(document.getElementById("valorUm").value);
+    let calculo1 = valor1 + valorEscolhidoPeloUsuário;
+    alert('Resultado do cálculo: ' + calculo1);
+}
+
+function realizaSubtração(){ 
+    let valor2 = Number(document.getElementById("valorDois").value);
+    let calculo2 = valor2 - valorEscolhidoPeloUsuário;
+    alert('Resultado do cálculo: ' + calculo2);
+}
+
+function realizadDivisão(){
+    let valor3 = Number(document.getElementById("valorTres").value);
+    let calculo3 = valor3 / valorEscolhidoPeloUsuário;
+    alert('Resultado do cálculo: ' + calculo3);
+}
+
+function realizaMultiplicação(){
+    let valor4 = Number(document.getElementById("valorQuatro").value);
+    let calculo4 = valor4 * valorEscolhidoPeloUsuário;
+    alert('Resultado do cálculo: ' + calculo4);
+}
+
+</script>

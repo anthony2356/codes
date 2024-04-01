@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register of Developers</title>
+  <style>
+
+    body {
+      background-image: linear-gradient(90deg, aqua, black);
+    }
+
+    fieldset {
+      border: transparent;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      width: 600px;
+      margin-left: 365px;
+      margin-top: 110px;
+    }
+
+    textarea {
+      resize: none;
+      box-shadow: 4px 4px 4px black;
+      border: none;
+      outline: none;
+      text-align: left;
+      margin-left: -10px;
+    }
+
+    textarea:hover {
+      background-color: aquamarine;
+      box-shadow: 4px 4px 4px cyan;
+      cursor: pointer;
+    }
+
+    input {
+      box-shadow: 4px 4px 4px black;
+      border: none;
+      outline: none;
+      font-size: 19px;
+    }
+
+    label{
+      font-size: 30px;
+    }
+
+    input:hover {
+      background-color: aquamarine;
+      box-shadow: 4px 4px 4px cyan;
+      cursor: pointer;
+    }
+
+    strong {
+      color: rgb(0, 217, 255);
+    }
+
+    button {
+      margin-left: 100px;
+      font-size: 26px;
+      border: none;
+      cursor: pointer;
+      width: 14.5%;
+      margin-left: 2px;
+      box-shadow: 3px 3px 3px black;
+      width: 200px;
+    }
+
+    button:hover {
+      box-shadow: 4px 4px 4px cyan;
+      cursor: pointer;
+      color: cyan;
+      box-sizing: content-box;
+    }
+
+    .caixa{
+        margin-top: 40px;
+    }
+
+    .clear:hover{
+      background-color: red;
+      color: black;
+      box-shadow: 4px 4px 4px red;
+    }
+
+    .send:hover{
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="caixa">
+    <form action="">
+      <div>
+        <div>
+          <footer>
+            <fieldset>
+                <label for="nome_de_usuário"><strong>Username:</strong></label>
+                <input type="text" name="username" id="302742" required />
+                <br /><br />
+                <label for="senha_de_usuário"><strong>Create Password:</strong></label>
+                <input type="password" name="user_password" id="302944" required />
+                <br /><br /><br /><br />
+                  <label for="cidade_em_que_mora"><strong>City:</strong></label>
+                  <input type="text" name="city_where_lives" id="303348" required />
+                  <br /><br />
+                  <label for="state_where_lives"><strong>State:</strong></label>
+                  <input type="text" name="state_where_lives" id="303449" required />
+                <br /><br /><br /><br /><br />
+                <button class="send" type="submit"><strong>Send</strong></button><br /><br />
+                <button class="clear" onclick="clear_form()"><strong>Clear</strong></button>
+            </fieldset>
+          </footer>
+        </div>
+      </div>
+    </form>
+</body>
+</div>
+
+<script>
+ 
+</script>
+
+<script>
+  function clear_form() {
+    alert('cleaning....')
+    alert('all clear!')
+    let dados1 = document.getElementById("302742").value;
+    document.getElementById("302742").value = "";
+    let dados3 = document.getElementById("302944").value;
+    document.getElementById("302944").value = "";
+    let dados19 = document.getElementById("303348").value;
+    document.getElementById("303348").value = "";
+    let dados20 = document.getElementById("303449").value;
+    document.getElementById("303449").value = "";
+    let dados21 = document.getElementById("303550").value;
+    document.getElementById("303550").value = "";
+  }
+</script>
+
+</html>

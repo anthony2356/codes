@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Básico 2.0</title>
+
+
+    <style>
+body{
+    background-color: turquoise;
+}fieldset{
+    background-color: white;
+    box-shadow: 2px 2px 2px black;
+    width: 22%;
+    margin-top: 40px;
+    margin-left: 514px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: transparent;
+}input{
+    box-shadow: 2px 2px 2px black;
+    border: transparent;
+    outline: none;
+}button{
+    box-shadow: 2px 2px 2px black;
+    cursor: pointer;
+}legend{
+    box-shadow: 2px 2px 2px black;
+    background-color: white;
+    margin-left: 27px;
+}h1{
+    font-family: Arial, Helvetica, sans-serif;
+}.botão1{
+    margin-top: 22px;
+    margin-left: 8px;
+}.botão2{
+    margin-top: 22px;
+    margin-left: 8px;
+}.botão3{
+    margin-top: 22px;
+    margin-left: 8px;
+}.botão4{
+    margin-top: 22px;
+    margin-left: 8px;
+}.botão5{
+    margin-top: 22px;
+    margin-left: 8px;
+}.botão6{
+    margin-top: 22px;
+    margin-left: 8px;
+    width: 95%;
+}
+    </style>
+
+
+</head>
+<body>
+    <h1><strong>Sistema de Cálculo By Infinity108108</strong></h1>
+    <fieldset>
+        <legend><Strong>Sistema de Cálculo</Strong></legend><br>
+        <div>
+            <label for="valorUniversal"><strong>Valor Inicial </strong></label>
+            <input type="text" id="valorInicial" name="valorUniversal"required><br><br><br>
+            <input type="text" id="valorUm" name="soma" required>
+            <button onclick="cálcula1()" class="botão1"> + </button><br><br>
+            <input type="text" id="valorDois" name="subtração"required>
+            <button onclick="cálcula2()" class="botão2"> - </button><br><br>
+            <input type="text" id="valorTres" name="divisão"required>
+            <button onclick="cálcula3()" class="botão3"> / </button><br><br>
+            <input type="text" id="valorQuatro" name="multiplicação"required>
+            <button onclick="cálcula4()" class="botão4">  X </button><br><br>
+            <input type="text" id="valorCinco" name="Porcentagem"required>
+            <button onclick="cálcula5()" class="botão5">  % </button><br><br>
+            <button onclick="mostrarTodosOsResultados()" class="botão6"> Mostrar tudo </button><br><br>
+         </div>
+    </fieldset>
+            <a href="file:///C:/Users/Eduardo/Desktop/Front%20End%20Projects/Programa%C3%A7%C3%A3o%202/Calculo%20B%C3%A1sico%202.0/index.html">Limpar</a>
+</body>
+</html>
+
+
+<script>
+    alert("limpando....")
+    alert("Bem Vindo !")
+function cálcula1(){
+   let valorInseridoNoComeço = Number(document.getElementById('valorInicial').value);
+   let valorCalculado1 = Number(document.getElementById("valorUm").value);
+   let calculoFinal1 =  valorCalculado1 + valorInseridoNoComeço;
+   alert("o resultado da conta será igual a " + calculoFinal1);
+}function cálcula2(){
+   let valorInseridoNoComeço = Number(document.getElementById('valorInicial').value);
+   let valorCalculado2 = Number(document.getElementById("valorDois").value);
+   let calculoFinal2 =  valorCalculado2 - valorInseridoNoComeço;
+   alert("o resultado da conta será igual a " + calculoFinal2);
+}function cálcula3(){
+   let valorInseridoNoComeço = Number(document.getElementById('valorInicial').value);
+   let valorCalculado3 = Number(document.getElementById("valorTres").value);
+   let calculoFinal3 =  valorInseridoNoComeço / valorCalculado3 ;
+   alert("o resultado da conta será igual a " + calculoFinal3);
+}function cálcula4(){
+   let valorInseridoNoComeço = Number(document.getElementById('valorInicial').value);
+   let valorCalculado4 = Number(document.getElementById("valorQuatro").value);
+   let calculoFinal4 =  valorCalculado4 * valorInseridoNoComeço;
+   alert("o resultado da conta será igual a " + calculoFinal4);
+}function cálcula5(){
+   let valorCalculado5 = Number(document.getElementById("valorCinco").value);
+   let calculoFinal5 = valorCalculado5 / 100;
+   alert("o resultado da conta será igual a " + calculoFinal5);
+}function mostrarTodosOsResultados(){
+    let mostrarCálculo1 = cálcula1();
+    let mostrarCálculo2 = cálcula2();
+    let mostrarCálculo3 = cálcula3();
+    let mostrarCálculo4 = cálcula4();
+    let mostrarCálculo5 = cálcula5();
+}
+</script>

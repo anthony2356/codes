@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>descubra sua idade</title>
+	<style>
+		body{
+	background-color: grey;
+}
+
+fieldset{
+	width: 22px;
+	font-family: sans-serif;
+	font-size: 22px;
+	margin-top: 225px;
+	margin-left: 595px;
+	background-color: white;
+	box-shadow: 2px 2px 2px black;
+}
+
+button{
+	box-shadow: 2px 2px 2px black;
+	cursor: pointer;
+}
+	</style>
+</head>
+<body>
+	<div>
+		<fieldset>
+			<label for="ano1" class="AnoInserido1">Insira um ano que nasceu: </label>
+			<input type="text" id="anoInserido1" name="ano1"><br>
+			<label for="ano2" class="AnoInserido2">Insira o ano atual: </label>
+			<input type="text" id="anoInserido2" name="ano2"><br>
+			<button onclick="calculaIdade()">Mostrar minha idade</button>
+		</fieldset>
+	</div>
+</body>
+</html>
+<script>
+	
+function calculaIdade(){
+	let anoAtual = Number(document.getElementById("anoInserido2").value);
+	let anoQueNasceu = Number(document.getElementById("anoInserido1").value);
+	let calculoDaIdade = anoQueNasceu - anoAtual;
+	alert("você tem : " + calculoDaIdade + " anos ");
+}
+</script>

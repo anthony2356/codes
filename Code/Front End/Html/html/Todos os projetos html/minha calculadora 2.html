@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        fieldset {
+            border: transparent;
+            font-size: 22px;
+            text-align: center;
+            background-color: darkslategrey;
+            width: 20px;
+            border-radius: 10px;
+            margin-top: 160px;
+            margin-left: 560px;
+        }
+
+        button {
+            width: 36px;
+            font-size: 1em;
+            margin-top: 8px;
+            box-shadow: 6px 6px 6px black;
+            cursor: pointer;
+            border: transparent;
+        }
+
+        p {
+            height: 25px;
+            background-color: white;
+            box-shadow: 5px 5px 5px black;
+            border: none;
+            color: black;
+            text-align: right;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .equals {
+            width: 163px;
+            background-color: darkcyan;
+        }
+
+        .addBtn {
+            background-color: orange;
+        }
+
+        .divBtn {
+            background-color: orange;
+        }
+
+        .minusBtn {
+            background-color: orange;
+        }
+
+        .timesBtn {
+            background-color: orange;
+        }
+
+        .percentBtn {
+            background-color: orange;
+        }
+
+        .delete {
+            background-color: red;
+        }
+
+        .zero {
+            width: 48%;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+
+        <p id="resultado"><strong></strong></p>
+        <button onclick="insert('7')">7</button>
+        <button onclick="insert('8')">8</button>
+        <button onclick="insert('9')">9</button>
+        <button onclick="clearDataInResultField()" class="delete">C</button><br>
+
+        <button onclick="insert('6')">6</button>
+        <button onclick="insert('5')">5</button>
+        <button onclick="insert('4')">4</button>
+        <button onclick="insert('+')" class="addBtn">+</button><br>
+
+        <button onclick="insert('1')">1</button>
+        <button onclick="insert('2')">2</button>
+        <button onclick="insert('3')">3</button>
+        <button onclick="insert('/')" class="divBtn">/</button><br>
+
+        <button onclick="insert('0')" class="zero">0</button>
+        <button onclick="insert('-')" class="minusBtn">-</button>
+        <button onclick="insert('*')" class="timesBtn">*</button>
+        <button onclick="calculate()" class="equals">=</button>
+
+    </fieldset>
+</body>
+
+<script>
+
+    function insert(number) {
+        let insertNumbers = document.getElementById('resultado').innerHTML;
+        document.getElementById('resultado').innerHTML = insertNumbers + number;
+    }
+
+</script>
+
+<script>
+
+    function clearDataInResultField() {
+        let clearDataInResultField = document.getElementById('resultado').innerHTML;
+        document.getElementById('resultado').innerHTML = "";
+    }
+
+</script>
+
+<script>
+
+    function calculate() {
+        let resultado = document.getElementById('resultado').innerHTML;
+        if (resultado) {
+            document.getElementById('resultado').innerHTML = eval(resultado);
+        } else {
+            alert('nothing to calc.')
+        }
+    }
+
+</script>
+
+</html>

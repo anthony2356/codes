@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Calculadora</title>
+    <style>
+        body{
+    background-color: black;
+}
+fieldset{
+    text-align: center;
+    width: 220px;
+    margin-left: 552px;
+    margin-top: 146px;
+    background-color: rgba(0, 0, 0, 0.856);
+    border: transparent;
+    font-size: 22px;
+
+
+}
+button{
+    width: 36px;
+    font-size: 20px;
+    margin-top: 8px;
+    box-shadow: 6px 6px 6px black;
+    cursor: pointer;
+    border: transparent;
+}
+p{  
+    width: 74%;
+    height: 29px;
+    box-shadow: 3px 3px 3px black;
+    text-align: right;
+    outline: none;
+    color: black;
+    background-color: white;
+    margin-left: 13%;
+}
+.equals{
+    width: 73%;
+    background-color: green;
+}
+.delete{
+    background-color: red;
+}
+.btn0{
+    width: 34.5%;
+}
+    </style>
+</head>
+<body>
+    <fieldset>
+        <!---Main place to get all the values wich will stay in this place-->
+
+        <p id="fieldOfInsertion"></p>
+
+        <!---Buttons For The Calculator-->
+
+        <button onclick="insert('7')">7</button>
+        <button onclick="insert('8')">8</button>
+        <button onclick="insert('9')">9</button>
+        <button onclick="clearInputValues()" class="delete">C</button><br>
+        <button onclick="insert('4')">4</button>
+        <button onclick="insert('5')">5</button>
+        <button onclick="insert('6')">6</button>
+        <button onclick="insertSymbols('/')">/</button><br>
+        <button onclick="insert('1')">1</button>
+        <button onclick="insert('2')">2</button>
+        <button onclick="insert('3')">3</button>
+        <button onclick="insertSymbols('+')">+</button><br>
+        <button onclick="insert('0')" class="btn0">0</button>
+        <button onclick="insertSymbols('-')">-</button>
+        <button onclick="insertSymbols('*')">*</button><br>
+        <button onclick="calculate()" class="equals">=</button>
+
+    </fieldset>
+</body>
+
+<!----Script Part Responsible by Insert the numbers and the symbols-->
+
+<script>
+
+function insert(Number){
+let insertNumbers = document.getElementById('fieldOfInsertion').innerHTML;
+document.getElementById('fieldOfInsertion').innerHTML = insertNumbers + Number;
+}
+
+function insertSymbols(Symbol){
+let insertSymbols = document.getElementById('fieldOfInsertion').innerHTML;
+document.getElementById('fieldOfInsertion').innerHTML = insertSymbols + Symbol; 
+}
+
+</script>
+
+<!---Script Part Responsible by Clear all the values inside the "p"-->
+
+<script>
+
+    function clearInputValues(){
+        let clearInputValues = document.getElementById('fieldOfInsertion').innerHTML;
+        document.getElementById('fieldOfInsertion').innerHTML = ""; 
+    }
+
+</script>
+
+<!---Script Part Responsible by Insert the Result of the calc -->
+
+<script>
+
+function calculate(){
+    let fieldOfInsertion = document.getElementById('fieldOfInsertion').innerHTML;
+    if(fieldOfInsertion){
+        document.getElementById('fieldOfInsertion').innerHTML = eval(fieldOfInsertion);
+    }else{
+        alert('nothing to calc.')
+    }
+}
+</script>
+
+</html>

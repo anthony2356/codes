@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login of Developers</title>
+    <link rel="import" href="Tela de Cadastro.html" />
+    <style>
+      body {
+      background-image: linear-gradient(90deg, aqua, black);
+    }
+
+    fieldset {
+      border: transparent;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      width: 600px;
+      margin-left: 365px;
+      margin-top: 110px;
+    }
+
+    textarea {
+      resize: none;
+      box-shadow: 4px 4px 4px black;
+      border: none;
+      outline: none;
+      text-align: left;
+      margin-left: -10px;
+    }
+
+    textarea:hover {
+      background-color: aquamarine;
+      box-shadow: 4px 4px 4px cyan;
+      cursor: pointer;
+    }
+
+    input {
+      box-shadow: 4px 4px 4px black;
+      border: none;
+      outline: none;
+      font-size: 19px;
+    }
+
+    label{
+      font-size: 30px;
+    }
+
+    input:hover {
+      background-color: aquamarine;
+      box-shadow: 4px 4px 4px cyan;
+      cursor: pointer;
+    }
+
+    strong {
+      color: rgb(0, 217, 255);
+    }
+
+    button {
+      margin-left: 100px;
+      font-size: 26px;
+      border: none;
+      cursor: pointer;
+      width: 14.5%;
+      margin-left: 2px;
+      box-shadow: 3px 3px 3px black;
+      width: 200px;
+    }
+
+    button:hover {
+      box-shadow: 4px 4px 4px cyan;
+      cursor: pointer;
+      color: cyan;
+      box-sizing: content-box;
+    }
+
+    .caixa{
+        margin-top: 40px;
+    }
+
+    .clear:hover{
+      background-color: red;
+      color: black;
+      box-shadow: 4px 4px 4px red;
+    }
+
+    .send:hover{
+      background-color: aquamarine;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <div>
+          <br />
+          <form action="">
+            <fieldset>
+              <br />
+              <label><strong>Username:</strong></label>
+              <input type="text" id="30789" required /><br /><br />
+              <label><strong>Password:</strong></label>
+              <input type="password" id="30790" required />
+              <br /><br /><br /><br />
+              <button type="submit"><strong>Log-in</strong></button>
+              <button onclick="clear()"><strong>Clear</strong></button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function clear() {
+      alert("Cleaning...");
+      let username = document.getElementById("30789").value;
+      document.getElementById("30789").value = "";
+      let password = document.getElementById("30790").value;
+      document.getElementById("30790").value = "";
+    }
+  </script>
+</html>

@@ -1,0 +1,28 @@
+/*CORES E FUNDOS [0 DE 3]
+                 [0 DE 10]
+*/
+
+fieldset {
+    background-repeat: define se as imagens se repetem no fundo da página;
+    background-attachment: define se a imagem do fundo será fixa ou se moverá conforme a página;
+    background-position: posição da imagem de fundo;
+}
+
+body {
+    border-top-width: ;
+    border-right-width: ;
+    border-bottom-width: ;
+    border-left-width: ;
+
+    largura das bordas no quatro quadrantes border-top-color: ;
+    border-right-color: ;
+    border-left-color: ;
+    border-bottom-color: ;
+
+    cor das bordas no quatro quadrantes border-right-style: ;
+    border-left-style: ;
+    border-bottom-style: ;
+    border-top-style: ;
+
+    definição de estilos das bordas nos quatro quadrantes
+}

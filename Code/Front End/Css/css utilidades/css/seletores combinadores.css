@@ -1,0 +1,19 @@
+/*SELETORES COMBINADORES [0 DE 4]*/
+
+elemA elemB {
+    afeta todos os elemB que sejam descendentes de elemA (filhos diretos ou não)
+}
+
+elemA>elemB {
+    afeta todos elemB que sejam filhos diretos de elemA
+}
+
+elemA+elemB {
+    afeta os elemB seguinte de elemA,
+    ambos com o mesmo pai(irmãos adjacentes)
+}
+
+elemA-elemB {
+    afeta os elemB seguinte de elemA,
+    ambos com o mesmo pai(irmãos de forma geral)
+}

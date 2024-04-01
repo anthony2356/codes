@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>veja sua idade</title>
+
+    <style>
+      body{
+        background-color: cyan;
+      }
+
+      fieldset{
+        background-color: white;
+        width: 12px;
+        margin-top: 142px;
+        margin-left: 592px;
+      }
+    </style>
+
+</head>
+<body>
+    <fieldset>
+        <div>
+            <legend><Strong>Veja a sua idade inserindo os dados</Strong></legend><br>
+            <label for="anoAtual"><strong>Ano Atual :</strong></label>
+            <input type="text" name="anoAtual" id="year" required>
+        </div><br>
+        <div>
+            <label for="anoQueNasceu"><strong>Ano Que Nasceu :</strong></label>
+            <input type="text" name="anoQueNasceu" id="year of birth" required>
+        </div><br>
+
+        <button onclick="mostrarIdade()"> Mostrar Idade </button>
+    </fieldset>
+</body>
+</html>
+
+<script>
+    function mostrarIdade(){
+        let anohoje = document.getElementById("year").value;
+        let anoAoQualNasceu = document.getElementById("year of birth").value;
+        let idadeCalculada = anohoje - anoAoQualNasceu;
+        alert("a sua idade é " + idadeCalculada);
+    }
+</script>

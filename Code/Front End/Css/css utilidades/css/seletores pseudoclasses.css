@@ -1,0 +1,18 @@
+/*SELETORES PSEUDOCLASSES [1 DE 4]*/
+
+:hover {
+    aparece ao passar o mouse por cima (já usei)
+}
+
+:active {
+    aparece quando o elemento é ativado clicando
+}
+
+:visited {
+    aparece quando o elemento /link já foi visitado
+}
+
+:focus {
+    aparece quando o elemento recebe foco,
+    como quando é selecionado com o teclado por exemplo
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>CALCULADORA SEM TECLADO</title>
+  </head>
+  <body>
+    <div>
+      <fieldset>
+        <br />
+        <h1><strong>CALCULADORA SEM TECLADO</strong></h1>
+        <label><strong>Valor inicial:</strong></label>
+        <input type="text" id="valorUniversal" /><br /><br /><br />
+        <label><strong>Somar com:</strong></label>
+        <input type="text" id="valorUm" />
+        <button onclick="somar_com()"><strong>=</strong></button><br />
+        <label><strong>Subtrair com:</strong></label>
+        <input type="text" id="valorDois" />
+        <button onclick="subtrair_com()"><strong>=</strong></button><br />
+        <label><strong>Dividir com:</strong></label>
+        <input type="text" id="valorTres" />
+        <button onclick="dividir_com()"><strong>=</strong></button><br />
+        <label><strong>Multiplicar com:</strong></label>
+        <input type="text" id="valorQuatro" />
+        <button onclick="multiplicar_com()"><strong>=</strong></button><br />
+        <br />
+        <button onclick="calcular_tudo()">
+          <strong>Calcular todos os valores</strong>
+        </button>
+        <button onclick="limpar_tudo()">
+          <strong>Limpar todos os valores</strong>
+        </button>
+        <button onclick="limpar_valor_inicial()">
+          <strong>Limpar apenas o valor inicial</strong>
+        </button>
+      </fieldset>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

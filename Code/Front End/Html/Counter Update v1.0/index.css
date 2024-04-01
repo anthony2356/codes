@@ -1,0 +1,22 @@
+body {
+  background-color: rgba(0, 0, 0, 0.946);
+}
+
+fieldset {
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  font-size: 60px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover{
+box-shadow: 9px 9px 9px rgb(255, 255, 255);
+}

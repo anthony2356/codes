@@ -1,0 +1,31 @@
+/*SELETORES BÁSICOS [2 DE 5] */
+
+* {
+    afeta todos os elementos da página
+}
+
+tag {
+    afeta todos os elementos dessa tag (já usei)
+    /*JÁ SABE*/
+}
+
+.classe {
+    afeta todos os elementos com essa classe (já usei)
+    /*JÁ SABE*/
+}
+
+#identificador {
+    afeta todos os elementos com esse id definido pelo desenvolvedor
+}
+
+[atributo] {
+    afeta todos os elementos que contenham esse atributo
+}
+
+[atributo=valor] {
+    afeta todos os elementos que contenham esse atributo com esse valor
+}
+
+[atributo *=valor] {
+    afeta todos os elementos que contenham esse valor em algum lugar desse atributo
+}

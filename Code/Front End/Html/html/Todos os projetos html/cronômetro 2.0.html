@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro 2.0</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+        fieldset{
+            border: transparent;
+            text-align: center;
+        }
+        h1{
+            color: white;
+        }
+        button{
+            border: transparent;
+            width: 3.6em;
+            font-size: 22px;
+            box-shadow: 4px 4px 4px black;
+            cursor: pointer;
+            margin-left: 7px;
+            color: white;
+        }
+        a{
+            border: 3px 3px 3px black;
+            background-color: black;
+            color: rgb(255, 0, 0);
+        }
+        .btn1{
+            background-color: green;
+        }
+        .btn2{
+            background-color: rgb(38, 0, 255);
+        }
+        .btn3{
+            background-color: rgb(255, 0, 0);
+        }
+        .btn4{
+            background-color: purple;
+            margin-left: 1225px;
+            margin-top: 332px;
+        }
+    </style>
+</head>
+<body>
+    <a onclick="limparRegistros()" href="file:///C:/Users/Eduardo/Desktop/Projetos%20realmente%20interessantes/Cron%C3%B4metro%202.0/index.html"><strong>Limpar Contagem</strong></a>
+    <fieldset><div>
+        <h1 id="counter"><strong>00:00:00</strong></h1>
+        <button class="btn1" onclick="iniciar()">Iniciar</button>
+        <button class="btn2" onclick="pausar()">Pausar</button>
+        <button class="btn3" onclick="parar()">Parar</button>
+        </div>
+    </fieldset>
+</body>
+<script>
+    alert("bem vindo !")
+</script>
+<script>
+    let seconds = 0;
+    let minutes = 0;
+    let hours = 0;
+    let interval
+    function limparRegistros(){
+        alert("Limpando dados..")
+    }
+    function doisNúmeros(doisNúmeros){
+        if(doisNúmeros<10){
+            return("0"+doisNúmeros);
+        }else{
+            return(doisNúmeros)
+        }
+    }
+    function iniciar(){
+      interval = setInterval(counter, 10);
+      alert("CONTAGEM INICIADA !")
+    }
+    function pausar(){
+       clearInterval(interval)
+       alert("CONTAGEM PAUSADA !")
+    }
+    function parar(){
+        document.getElementById('counter').innerText="00:00:00"
+        alert("CONTAGEM PARADA !")
+    }
+    function counter(){
+        seconds++
+        if(seconds==60){
+            seconds=0;
+            minutes++
+        }if(minutes==60){
+            minutes=0;
+            hours++
+        }
+        document.getElementById('counter').innerText=doisNúmeros(hours) + ":" + doisNúmeros(minutes) + ":" + doisNúmeros(seconds)
+    }
+</script>
+</html>

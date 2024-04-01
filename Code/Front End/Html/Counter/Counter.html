@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO DO BOTÃO</title>
+    <style>
+        body{
+    background-color: rgb(52, 7, 7);
+}
+
+p{
+    color: red;
+}
+
+div{
+    text-align: center;
+    font-size: 130px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    text-align: center;
+    font-size: 30px;
+    margin-top: -400px;
+    margin-left: 20px;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 29px;
+    color: rgb(0, 0, 0);
+    margin-left: 70%;
+    margin-top: 20%;
+}
+
+button:hover{
+    box-shadow: 10px 10px red;
+    cursor: pointer;
+}
+
+.A{
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 0, 0);
+    outline: none;
+}
+    </style>
+</head>
+<body>
+    <a id="100" onmouseover="alterar_texto()" href="https://www.youtube.com/shorts/0bGQpTsYm3w" target="_blank"><strong>YOUTUBE BEBEBEBEB</strong></a>
+    <button id="2093" onmouseover="alterar_texto_1()" onclick="start_counter()" class="A"><strong>?&%$@#{}</strong></button>
+    <div>
+     <p id="counter"><strong>00:00</strong></p>
+    </div>
+     <button id="20" onmouseover="alterar_texto()" onclick="loop_start_1()"><strong>Botão 1</strong></button>
+     <button id="30" onmouseover="alterar_texto()" onclick="loop_start_2()"><strong>Botão 2</strong></button>   
+     <button id="40" onmouseover="alterar_texto()" onclick="loop_start_3()"><strong>Botão 3</strong></button>
+     <button id="50" onmouseover="alterar_texto()" onclick="loop_start_4()"><strong>Botão 4</strong></button>
+     <button id="60" onmouseover="alterar_texto()" onclick="loop_start_5()"><strong>Botão 5</strong></button>
+     <button id="70" onmouseover="alterar_texto()" onclick="loop_start_6()"><strong>Botão 6</strong></button>
+     <button id="80" onmouseover="alterar_texto()" onclick="loop_start_7()"><strong>Botão 7</strong></button>
+     <button id="90" onmouseover="alterar_texto()" onclick="loop_start_8()"><strong>Botão 8</strong></button>
+</body>
+<script>
+var milésimos = 0;
+var segundos = 0;
+var interval;
+function start_counter() {
+  alert("você possui, 1uto min para clicar no botão correto");
+  interval = setInterval(counter, 10);
+  function counter() {
+    milésimos++;
+    if (milésimos == 60) {
+      milésimos = 0;
+      segundos++;
+    }
+    if (segundos == 60) {
+      freeze_browser();
+    }
+    document.getElementById("counter").innerText =
+      two_numbers(segundos) + ":" + two_numbers(milésimos);
+  }
+}
+
+function alterar_texto(){
+   button_texto = document.getElementById('20').innerText = "@#$#%#@$##@?}{}{"
+   button_texto = document.getElementById('30').innerText = "@#$%#645321654"
+   button_texto = document.getElementById('40').innerText = "@#?????????????"
+   button_texto = document.getElementById('50').innerText = "@#$"
+   button_texto = document.getElementById('60').innerText = "@#$#%8999998989"
+   button_texto = document.getElementById('70').innerText = "@#@@@@@@@@@@@@@"
+   button_texto = document.getElementById('80').innerText = "@"
+   button_texto = document.getElementById('90').innerText = "."
+   button_texto = document.getElementById('100').innerText = "2X2X2X2X2X2X2X2 = ?"
+  }
+
+function alterar_texto_1(){
+  button_texto_1 = document.getElementById('2093').innerText = '???????????????????'
+}
+
+function two_numbers(two_numbers) {
+  if (two_numbers < 10) {
+    return "0" + two_numbers;
+  } else {
+    return two_numbers;
+  }
+}
+
+function loop_start_1() {
+  for (var i = 0; i < 2969; i++) {
+    console.log(i);
+  }
+}
+function loop_start_2() {
+  for (var i = 0; i < 995647457; i++) {
+    console.log(i);
+  }
+}
+function loop_start_3() {
+  for (var i = 0; i < 9995647; i++) {
+    console.log(i);
+  }
+}
+function loop_start_4() {
+  for (var i = 0; i < 3000; i++) {
+    console.log(i);
+  }
+}
+function loop_start_5() {
+  for (var i = 0; i < 5; i++) {
+    console.log(i);
+  }
+}
+function loop_start_6() {
+  for (var i = 0; i < 99768; i++) {
+    console.log(i);
+  }
+}
+function loop_start_7() {
+  for (var i = 0; i < 999932454; i++) {
+    console.log(i);
+  }
+}
+function loop_start_8() {
+  for (var i = 0; i < 99; i++) {
+    console.log(i);
+  }
+}
+function freeze_browser() {
+  for (var i = 0; i < 1000000000000000; i++) {
+    console.log(i);
+  }
+}
+
+</script>
+</html>

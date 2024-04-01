@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Dela+Gothic+One&family=Skranji:wght@700&display=swap');
+
+*{
+    padding: 0;
+}
+
+body{
+    font-family: 'Croissant One', cursive;
+    background-image: linear-gradient(48deg, #ffff02, rgb(144, 144, 17));
+}
+
+main{
+    text-align: left;
+    width: 50%;
+    margin-left: 30px;
+    margin-top: -64.5%;
+}
+
+div{
+    margin-left: 55%;
+    text-align: center;
+}
+
+.links{
+    text-decoration: none;
+    font-family: 'Croissant One', cursive;
+    color: black;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 6px 6px 6px;
+}
+
+.links:hover{
+    box-shadow: 5px 5px 5px black;
+}
+
+.parágrafo{
+    width: 190%;
+}

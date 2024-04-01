@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Croissant+One&family=Dancing+Script&family=Dela+Gothic+One&family=Skranji:wght@700&family=Young+Serif&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    color: white;
+    font-family: 'Young Serif', serif;
+    background-image: linear-gradient(60deg, rgb(8, 8, 95), rgb(27, 25, 25));
+}
+
+div{
+    margin-left: 55%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+main{
+    text-align: left;
+    width: 50%;
+    margin-left: 30px;
+    margin-top: -150%;
+}
+
+a{
+  text-decoration: none;
+    color: black;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 6px 6px 6px;  
+}
+
+a:hover{
+    box-shadow: 5px 5px 5px black;
+}
+    

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        fieldset{
+            background-color: white;
+            text-align: center;
+            width: 600px;
+            border-radius: 20px;
+            margin-left: 340px;
+            margin-top: 220px;
+            padding: 40px;
+        }
+        button{
+            font-family: arial;
+            cursor: pointer;
+            font-size: 35px;
+            border: none;
+        }
+        button:hover{
+            box-sizing: content-box;
+            box-shadow: 5px 5px 5px black;
+            background-color: grey;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <div>
+            <h1 id="counter">
+                00:00:00
+            </h1>
+            <button onclick="start()"><strong>Iniciar</strong></button>
+        </div>
+    </fieldset>
+</body>
+<script>
+    var segundos = 0;
+    var minutos = 0;
+    var horas = 0;
+    var intervalo;
+    function addZero(addZero){
+     if(addZero < 10){
+        return '0' + addZero;
+     }else{
+        return addZero;
+     }
+    }
+    function start(){
+      intervalo = setInterval(count, 1000)
+      function count(){
+        segundos++
+        if(segundos == 60){
+            segundos = 0;
+            minutos++
+        }if(minutos == 60){
+            minutos = 0;
+            horas++
+        }if(horas == 24){
+            horas = 0;
+            alert('completou-se um dia !')
+        }
+        document.getElementById('counter').innerText= addZero(horas) + ":" + addZero(minutos) + ":" + addZero(segundos);
+      }
+    }
+</script>
+</html>

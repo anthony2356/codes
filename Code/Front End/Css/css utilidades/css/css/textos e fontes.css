@@ -1,0 +1,9 @@
+/*TEXTOS E FONTES [1 DE 4]*/
+
+fieldset {
+    font-weight: peso da fonte;
+    [ex: bold] font-variant: altera o variante;
+    [ex: small-caps] text-indent: recuo a esquerda da primeira linha;
+    [ex: 3em] text-decoration: efeitos decorativos;
+    [underline]
+}

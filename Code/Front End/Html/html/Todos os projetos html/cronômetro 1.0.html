@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <style>
+        h1{
+            color: white;
+        }
+        body{
+            background-color: black;
+        }
+        fieldset{
+            text-align: center;
+            border: transparent;
+        }
+        button{
+            height: 2.5em;
+            width: 5.5em;
+            border: none;
+            color: white;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+        .startBtn{
+         background-color: rgb(24, 165, 24);
+        }
+        .pauseBtn{
+         background-color: rgb(75, 75, 194);
+        }
+        .resetBtn{
+         background-color: rgb(255, 42, 42);
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <h1 id="counter">00:00:00</h1>
+        <button class="startBtn" onclick="start()">start</button>
+        <button class="pauseBtn" onclick="pause()">pause</button>
+        <button class="resetBtn" onclick="reset()">reset</button>
+</body>
+<script>
+var seconds = 0;
+var minutes = 0;
+var hours = 0;
+var interval
+
+function twoDigits(digit){
+  if(digit<10){
+    return('0'+ digit)
+  }else{
+    return(digit)
+  }
+}
+
+function start(){
+    counter();
+  interval = setInterval(counter, 100)
+}
+function pause(){
+ clearInterval(interval)
+}
+
+function reset(){
+    clearInterval(interval)
+    seconds = 0;
+    minutes = 0;
+    document.getElementById('counter').innerText="00:00:00"
+}
+
+function counter(){
+    seconds++
+    if(seconds == 60){
+        minutes++
+        seconds=0
+        if(minutes == 60){
+            minutes = 0;
+            hours++
+        }
+    }
+    document.getElementById('counter').innerText= twoDigits(hours) + ":" + twoDigits(minutes) + ":" + twoDigits(seconds)
+}
+</script>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8"> <!--isso sempre vai servir pra mostrar ao navegador que o documento 
+     html vai ser codificado em utf-8-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--promove responsividade-->
+    <title>Calculadora</title>
+    <style>
+        body {
+            background-color: rgb(31, 31, 31);
+        }
+
+        fieldset {
+            width: 54%;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: darkgray;
+            border: none;
+            box-shadow: 9px 9px 9px black;
+            border-radius: 10px;
+            position: absolute;
+            font-size: 50px;
+            padding: 30px;
+        }
+
+        p {
+            height: 26.5px;
+            background-color: white;
+            box-shadow: 3px 3px 3px black;
+            width: 87%;
+            margin-left: 5%;
+            text-align: right;
+            color: black;
+            font-family: arial;
+            margin-top: 20px;
+            font-size: 26px;
+            padding: 4px;
+        }
+
+        button {
+            text-align: center;
+            border: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            margin-top: 8px;
+            width: 38.5px;
+            margin-left: 2px;
+            box-shadow: 5px 5px 5px black;
+            cursor: pointer;
+            background-color: rgb(31, 31, 31);
+            color: white;
+        }
+
+        button:hover {
+            box-shadow: 5px 5px 5px white;
+        }
+
+        .btn0 {
+            width: 18%;
+        }
+
+        .btnIgual {
+            width: 94%;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <div>
+            <p id="resultado"><strong></strong></p>
+            <button onclick="inserirNúmero('7')"><strong>7</strong></button>
+            <button onclick="inserirNúmero('8')"><strong>8</strong></button>
+            <button onclick="inserirNúmero('9')"><strong>9</strong></button>
+            <button onclick="limparDados()"><strong>C</strong></button><br>
+            <button onclick="inserirNúmero('6')"><strong>6</strong></button>
+            <button onclick="inserirNúmero('5')"><strong>5</strong></button>
+            <button onclick="inserirNúmero('4')"><strong>4</strong></button>
+            <button onclick="inserirSímbolo('+')"><strong>+</strong></button><br>
+            <button onclick="inserirNúmero('1')"><strong>1</strong></button>
+            <button onclick="inserirNúmero('2')"><strong>2</strong></button>
+            <button onclick="inserirNúmero('3')"><strong>3</strong></button>
+            <button onclick="inserirSímbolo('/')"><strong>/</strong></button><br>
+            <button class="btn0" onclick="inserirNúmero('0')"><strong>0</strong></button>
+            <button onclick="inserirSímbolo('.')"><strong>.</strong></button>
+            <button onclick="inserirSímbolo('-')"><strong>-</strong></button>
+            <button onclick="inserirSímboloDeMultiplicar('*')"><strong>X</strong></button><br>
+            <button class="btnIgual" onclick="calcularDados()"><strong> = </strong></button>
+        </div>
+    </fieldset>
+    <script>
+        function inserirNúmero(num) {
+            let inserirNúmero = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = inserirNúmero + num;
+        } function inserirSímbolo(symbol) {
+            let inserirSímbolo = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = inserirSímbolo + symbol;
+        } function inserirSímboloDeMultiplicar(símbolo) {
+            let inserirSímboloDeMultiplicar = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = inserirSímboloDeMultiplicar + símbolo;
+        } function limparDados() {
+            let limparDados = document.getElementById('resultado').innerHTML = '';
+        } function calcularDados() {
+            let resultado = document.getElementById('resultado').innerHTML;
+            if (resultado) {
+                document.getElementById('resultado').innerHTML = eval(resultado);
+            }
+            else {
+                alert('nada para calcular.')
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Cadastro || Desenvolvedores</title>
+
+	<style>
+		b {
+			color: black;
+		}
+
+		p {
+			font-size: 18px;
+			color: black;
+		}
+
+		body {
+			font-family: sans-serif;
+			background-color: grey;
+		}
+
+		fieldset {
+			width: 45%;
+			position: absolute;
+			top: 0.39%;
+			left: 30%;
+			font-size: 16px;
+			height: 90;
+			margin-top: -0.5%;
+			margin-top: 0.5%;
+			padding: 5px;
+			text-align: center;
+			color: black;
+			border: transparent;
+			border-radius: 8px;
+		}
+
+		legend {
+			padding: 5px;
+			text-align: center;
+			color: cyan;
+			font-size: 32px;
+			border: solid black;
+			background-color: transparent;
+			border-radius: 8px;
+			border: transparent;
+		}
+
+		.inputGenero {
+			outline: none;
+		}
+
+		.caixadetexto {
+			box-sizing: 2px 2px 2px;
+			box-shadow: 1px 1px 1px black;
+			border: black;
+			color: black;
+			outline: none;
+		}
+
+		.título2 {
+			font-size: 1.5em;
+		}
+
+		.título {
+			font-size: 1em;
+		}
+
+		.legenda3 {
+			font-size: 1em;
+
+		}
+
+		.legenda2 {
+			font-size: 2.5em;
+		}
+
+		.box {
+			color: cyan;
+		}
+
+		.labelInput {
+			text-align: unset;
+			color: black;
+		}
+
+		.inputUser {
+			background-color: white;
+			font-size: 20px;
+			letter-spacing: 0.5px;
+		}
+
+		.inputUser:hover {
+			box-sizing: 2px 2px 2px;
+			box-shadow: 1px 1px 1px black;
+			border: black;
+		}
+
+		button {
+			width: 16%;
+			color: black;
+			background-color: white;
+			border-color: black;
+			cursor: pointer;
+			border: 1px 1px 1px black;
+			outline: none;
+		}
+
+		button:hover {
+			box-sizing: 2px 2px 2px;
+			box-shadow: 1px 1px 1px black;
+			border: black;
+			color: black;
+			outline: none;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class='Box'>
+
+		<form action=''>
+
+			<fieldset>
+
+				<legend class='legenda2'><b>Cadastro Dev´s</b></legend>
+
+				<p><b class='título2'>Complete suas informações logo abaixo</b></p>
+
+				<div class='inputBox'>
+					<label for='nome' class='labelInput'><b>Nome</b></label>
+					<input type='text' name='nome' id='nome' class='inputUser' required>
+				</div>
+				<div class='inputBox'>
+					<label for='email' class='labelInput'><b>Email</b></label>
+					<input type='email' name='email' id='email' class='inputUser' required>
+				</div>
+
+				<br>
+
+				<b class='título'>Qual o seu gênero?</b>
+
+				<br>
+				<br>
+
+				<div class='generoSexual'>
+					<label for='masculino'><b>Masculino</b></label>
+					<input type='radio' name='genero' id='masculino' value='masculino' class='inputGenero' required>
+				</div>
+
+				<div class='generoSexual'>
+					<label for='feminino'><b>Feminino</b></label>
+					<input type='radio' name='genero' id='feminino' value='feminino' class='inputGenero' required>
+				</div>
+
+				<p><b>De onde você é ?</b></p>
+
+				<div class='inputBox'>
+					<label for='país' class='labelInput'><b>País</b></label>
+					<input type='text' name='país' id='país' class='inputUser' required>
+				</div>
+				<div class='inputBox'>
+					<label for='cidade' class='labelInput'><b>Cidade</b></label>
+					<input type='text' name='cidade' id='cidade' class='inputUser' required>
+				</div>
+				<div class='inputBox'>
+					<label for='estado' class='labelInput'><b>Estado</b></label>
+					<input type='text' name='estado' id='estado' class='inputUser' required>
+				</div>
+
+				<p class='legenda'><strong>Linguagem(s) que gosta :</strong></p>
+
+				<label for='javascript' class='labelInput'><strong>JavaScript</strong></label>
+				<input type='checkbox' name='javascript' id='javascript' class='inputUser' required><br>
+				<label for='html' class='labelInput'><strong>Html</strong></label>
+				<input type='checkbox' name='html' id='html' class='inputUser' required><br>
+				<label for='css' class='labelInput'><strong>Css</strong></label>
+				<input type='checkbox' name='css' id='css' class='inputUser' required><br>
+				<label for='php' class='labelInput'><strong>PHP</strong></label>
+				<input type='checkbox' name='php' id='php' class='inputUser' required><br>
+				<label for='c++' class='labelInput'><strong>C++</strong></label>
+				<input type='checkbox' name='c++' id='c++' class='inputUser' required><br>
+				<label for='c#' class='labelInput'><strong>C#</strong></label>
+				<input type='checkbox' name='c#' id='c#' class='inputUser' required><br>
+				<label for='node.js' class='labelInput'><strong>Node.Js</strong></label>
+				<input type='checkbox' name='node.js' id='node.js' class='inputUser' required><br>
+				<label for='python' class='labelInput'><strong>Python</strong></label>
+				<input type='checkbox' name='python' id='python' class='inputUser' required><br>
+				<label for='typescript' class='labelInput'><strong>TypeScript</strong></label>
+				<input type='checkbox' name='typescript' id='typescript' class='inputUser' required><br>
+
+				<p><strong class="legenda3">Conte um pouco sobre sua experiência :</strong></p>
+
+				<textarea class="caixadetexto" rows='4' style="width: 26em"></textarea>
+
+				<br>
+				<br>
+
+				<button>Enviar</button>
+
+			</fieldset>
+
+		</form>
+
+	</div>
+
+</body>
+
+</html>
+
+<meta charset='UTF-8'>
+
+<!----Script responsável por informar o user do que vai acontecer--->
+
+<script>
+
+	alert('autenticando.....')
+	alert('autenticação feita com sucesso !')
+
+</script>

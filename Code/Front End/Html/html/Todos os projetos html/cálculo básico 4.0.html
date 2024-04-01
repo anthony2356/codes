@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo Básico 4.0</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .f1 {
+      background-color: grey;
+      width: 190px;
+      font-size: 22px;
+      border: none;
+      margin-left: 670px;
+      margin-top: 130px;
+    }
+
+    .f3 {
+      background-color: grey;
+      width: 220px;
+      font-size: 22px;
+      border: none;
+      margin-left: 930px;
+      margin-top: -320px;
+    }
+
+    p {
+      height: 29px;
+      background-color: white;
+      box-shadow: 4px 4px 4px black;
+      border: none;
+      text-align: right;
+    }
+
+    button {
+      width: 36px;
+      font-size: 1em;
+      margin-top: 8px;
+      box-shadow: 6px 6px 6px black;
+      cursor: pointer;
+      border: transparent;
+    }
+
+    .zero {
+      width: 41%;
+    }
+
+    .equalsBtn {
+      width: 85%;
+      background-color: green;
+    }
+
+    .clearBtn {
+      background-color: red;
+    }
+
+    .symbols {
+      background-color: orange;
+    }
+
+    .pMain {
+      height: 200px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <fieldset class="f1">
+    <p id="initialResult"></p><br>
+    <p id="finalResult" class="pMain"></p>
+    <button onclick="insert('7')"><strong>7</strong></button>
+    <button onclick="insert('8')"><strong>8</strong></button>
+    <button onclick="insert('9')"><strong>9</strong></button>
+    <button onclick="clear()" class="clearBtn"><strong>C</strong></button><br>
+    <button onclick="insert('6')"><strong>6</strong></button>
+    <button onclick="insert('5')"><strong>5</strong></button>
+    <button onclick="insert('4')"><strong>4</strong></button>
+    <button onclick="insert('+')" class="symbols"><strong>+</strong></button><br>
+    <button onclick="insert('1')"><strong>1</strong></button>
+    <button onclick="insert('2')"><strong>2</strong></button>
+    <button onclick="insert('3')"><strong>3</strong></button>
+    <button onclick="insert('-')" class="symbols"><strong>-</strong></button><br>
+    <button onclick="insert('0')" class="zero"><strong>0</strong></button>
+    <button onclick="insert('/')" class="symbols"><strong>/</strong></button>
+    <button onclick="insert('*')" class="symbols"><strong>*</strong></button><br>
+    <button onclick="calculate()" class="equalsBtn"><strong>=</strong></button>
+  </fieldset><br>
+
+</body>
+
+<script>
+  function insert(num) {
+    let insert = document.getElementById('initialResult').innerHTML
+    document.getElementById('initialResult').innerHTML = insert + num
+    let insert1 = document.getElementById('result1').innerHTML
+    document.getElementById('result1').innerHTML = insert + num
+    let insert2 = document.getElementById('result2').innerHTML
+    document.getElementById('result2').innerHTML = insert + num
+    let insert3 = document.getElementById('result3').innerHTML
+    document.getElementById('result3').innerHTML = insert + num
+    let insert4 = document.getElementById('result4').innerHTML
+    document.getElementById('result4').innerHTML = insert + num
+  }
+</script>
+
+</html>

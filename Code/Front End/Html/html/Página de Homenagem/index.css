@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Dela+Gothic+One&family=Righteous&family=Roboto:ital,wght@0,900;1,900&display=swap");
+
+body {
+  font-family: "Croissant One", cursive;
+  background-color: black;
+}
+
+.fieldset1 {
+  border: none;
+  height: 20%;
+  text-align: left;
+  margin-left: 20px;
+}
+
+strong {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Croissant One", cursive;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+a:hover {
+  box-shadow: 6px 6px 6px white;
+}
