@@ -1,0 +1,15 @@
+[{
+    "name": "Sandy",
+    "age": 22,
+    "work": "Developer"
+},
+{
+    "name": "Bob",
+    "age": 32,
+    "work": "Ethical Hacker"
+},
+{
+    "name": "John",
+    "age": 35,
+    "work": "Military Soldier"
+}]

@@ -1,0 +1,7 @@
+=> DOM ou document object model, é um modelo de objeto de todos os documentos da web.
+=> A Web em si tem suas apis, podemos consumi-las manipulando desde um simples valor por
+meio de uma coleta ou mesmo.
+=> Ou até saber a localização daquela janela ou site por exemplo.
+=> Com o dom podemos fazer infinitas coisas, sendo uma api gigantesca, pois ela está na web,
+podemos usar essa api, pra fazer páginas interativas, onde o user bota a informação, ou um valor,
+e depois ela passa por essa api, retornando e fazendo um cálculo de matemática básica.

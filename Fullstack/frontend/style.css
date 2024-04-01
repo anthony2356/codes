@@ -1,0 +1,41 @@
+/* todo e qualquer elemento que tiver uma classe o css irá aplicar*/
+.dev{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20x;
+}
+/* todo e qualquer elemento que tiver um identificador o css irá aplicar*/
+#dev{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20x;
+}
+/* definimos variáveis que armazenam a cor da página entre outros*/
+:root{
+    --purple: purple;
+}
+/*um botão ao qual o css aplica a propriedade vindo de uma variável*/
+button{
+    background-color: var(--purple);
+}
+/*um botão que recebe uma interatividade por meio de pseudoclasses [classes interativas]*/
+/*isso faz com que ao passar o mouse por cima a propriedade se aplica*/
+button:hover{
+    background-color: var(--purple);
+}
+/*fazendo isso você aplica a várias classes ao mesmo tempo uma única propriedade*/
+.button,.dev,.msg,
+.name,.input,.script{
+    background-color: var(--purple);
+}
+/*fazendo isso você aplica a várias classes ao mesmo tempo uma única propriedade junto com*/
+/*outras propriedades como por exemplo propriedades de responsividade*/
+.button,.dev,.msg,
+.name,.input,.script{
+    background-color: var(--purple);
+    display: flex;
+    align-items: right;
+    flex-wrap: wrap;
+}
+/*mais informações sobre responsividade de telas em : https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+
